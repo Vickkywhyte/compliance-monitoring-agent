@@ -52,3 +52,7 @@ class StableIDError(ComplianceAgentError):
 
 class DiffError(ComplianceAgentError):
     """Raised when diff computation fails (binary content, oversized input)."""
+
+
+class LLMUnavailableError(LLMError):
+    """Raised when no LLM backend is reachable (Ollama offline, all retries exhausted)."""

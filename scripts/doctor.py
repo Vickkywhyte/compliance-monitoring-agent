@@ -38,6 +38,19 @@ PUBLIC_MODULES = [
     "compliance_agent.detection.diff",
     "compliance_agent.detection.detector",
     "compliance_agent.storage.changes",
+    "compliance_agent.storage.summaries",
+    "compliance_agent.storage.mappings",
+    "compliance_agent.llm",
+    "compliance_agent.llm.backends",
+    "compliance_agent.llm.gateway",
+    "compliance_agent.llm.openrouter",
+    "compliance_agent.llm.ollama",
+    "compliance_agent.llm.prompts",
+    "compliance_agent.intelligence",
+    "compliance_agent.intelligence.fencing",
+    "compliance_agent.intelligence.kb",
+    "compliance_agent.intelligence.summarizer",
+    "compliance_agent.intelligence.mapper",
 ]
 
 

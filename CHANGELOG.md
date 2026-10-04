@@ -9,6 +9,56 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 4 — Intelligence layer (summarize, map) 🟢 (2026-10-04)
+
+### [phase-4] feat(intelligence): LLM gateway, summarizer, mapper, prompt injection defense
+
+**2026-10-04 — Completed**
+- 30 new files across llm/, intelligence/, storage/, scripts/, tests/, data/
+- `llm/`: LLMBackend ABC + LLMResponse, LLMGateway (semaphore, backoff, fallback),
+  OpenRouterBackend, OllamaBackend, PromptRegistry with disk cache
+- `intelligence/`: fencing (C-01/C-02), KB indexer (Chroma + MiniLM), Summarizer
+  (citation-grounded), Mapper (top-K retrieval, confidence/impact/section filtering)
+- `intelligence/prompts/`: _shared_v1.txt (system preamble), summarize_v1.txt, map_v1.txt
+- `storage/`: SummaryRepository, ProcessMappingRepository
+- `data/kb/processes/`: 6 process markdown files (kyc, aml, sanctions_screening,
+  regulatory_reporting, customer_due_diligence, transaction_monitoring)
+- `tests/mocks/llm.py`: FakeLLMBackend (pre-configured responses, no network)
+- `tests/test_summarizer.py` (5 tests), `tests/test_mapper.py` (5 tests)
+- `tests/security/test_prompt_injection.py` (10 injection scenarios — all pass)
+- `tests/security/test_rate_limit.py` (5 tests: concurrency, queue overflow, retry,
+  fail-fast, fallback activation)
+- `scripts/04_process.py`, `scripts/04_process_selftest.py` (4 assertions pass)
+- Existing files updated: exceptions.py (+LLMUnavailableError), doctor.py (+13 modules → 42),
+  Makefile (process, process-selftest targets)
+- Test count: 115 (up from 90, +25 Phase 4 tests)
+
+**Checkpoint evidence:**
+- `make sync` → OK
+- `make doctor` → 42 imports OK
+- `make test` → 115 passed
+- `make process-selftest` → 4 assertions passed
+- `pytest tests/security/test_prompt_injection.py -v` → 10 passed
+- `pytest tests/security/test_rate_limit.py -v` → 5 passed
+- Lesson 8 grep (`os.getenv`/`os.environ` outside `config/loader.py`) → empty
+
+**Security controls verified:**
+- C-01: All external document content wrapped in UNTRUSTED_SOURCE_CONTENT tags
+- C-02: fence() escapes embedded tags before wrapping (escape-then-wrap order enforced)
+- C-05: 10 injection scenarios tested: wrapping, escaping, containment of 8 attack patterns
+- C-26: Gateway semaphore enforces max 4 concurrent LLM calls (threading test passes)
+- C-27: Queue overflow (>queue_max_size in-flight) raises RateLimitError immediately
+- C-28: Backoff ±20% jitter on 429/503; after 3 consecutive, Ollama fallback armed
+- C-33: Local Ollama preferred after primary rate-limit threshold (fallback-first design)
+- Citation grounding: quoted_text always extracted from doc.content[span:span], never from LLM output
+
+**Prevention mechanisms active:**
+- Lesson 3: All tests assert on Summary/ProcessMapping records, not mock call counts
+- Lesson 6: Gateway semaphore baked in from day one (not retrofitted)
+- Lesson 8: os.getenv/os.environ still only in config/loader.py (grep → empty)
+
+---
+
 ## Phase 3 — Change detection 🟢 (2026-10-04)
 
 ### [phase-3] feat(detection): stable ID extraction, unified diff, detector, ChangeRepository
