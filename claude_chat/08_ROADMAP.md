@@ -107,7 +107,7 @@ test passes.
 
 ---
 
-## Phase 2 — Ingestion + storage ⚪
+## Phase 2 — Ingestion + storage 🟢
 
 **Goal:** Fetch from all three source types, normalize, and persist. No
 detection yet.
