@@ -1,0 +1,19 @@
+golden_set_path: "data/eval/golden.jsonl"
+
+metrics:
+  coverage:
+    - detection_recall
+    - detection_precision
+  accuracy:
+    - summary_faithfulness
+    - summary_hallucination_rate
+    - mapping_precision
+    - mapping_recall
+    - confidence_brier
+  action_quality:
+    - proposal_acceptance_rate
+    - routing_accuracy
+    - deadline_accuracy
+
+bootstrap_samples: 1000
+seed: 0

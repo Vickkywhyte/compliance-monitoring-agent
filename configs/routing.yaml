@@ -1,0 +1,30 @@
+rules:
+  - priority: 1
+    when:
+      severity: critical
+    assign_to: mlro
+
+  - priority: 2
+    when:
+      severity: high
+    assign_to: mlro
+
+  - priority: 3
+    when:
+      severity: medium
+      category: policy_update
+    assign_to: officer
+
+  - priority: 4
+    when:
+      severity: medium
+    assign_to: officer
+
+  - priority: 5
+    when:
+      severity: low
+    assign_to: analyst
+
+default:
+  assign_to: officer
+  flag_unmatched: true

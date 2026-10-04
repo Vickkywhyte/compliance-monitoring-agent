@@ -1,0 +1,25 @@
+llm:
+  primary_model: "meta-llama/llama-3.1-8b-instruct:free"
+  fallback_model: "llama3.1:8b"
+  temperature: 0.0
+  max_tokens: 1024
+  timeout_seconds: 30
+
+gateway:
+  max_concurrent: 4
+  queue_max_size: 100
+  backoff_initial_ms: 500
+  backoff_max_ms: 30000
+  fallback_after_consecutive_429: 3
+
+summarizer:
+  max_words: 200
+  min_citations: 1
+  hallucination_gate: 0.05
+
+mapper:
+  top_k: 8
+  min_confidence: 0.30
+
+proposer:
+  max_proposals_per_change: 5

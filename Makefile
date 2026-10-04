@@ -1,0 +1,58 @@
+.PHONY: sync doctor test selftest clean clean-cache clean-data \
+        ingest detect process eval demo serve lock
+
+# Prefer the activated venv's pip; fall back to the Homebrew Python 3.11
+PIP ?= $(shell command -v pip || echo /opt/homebrew/opt/python@3.11/bin/pip3.11)
+PYTHON ?= $(shell command -v python || echo /opt/homebrew/opt/python@3.11/bin/python3.11)
+
+# ── Phase 1: foundation ─────────────────────────────────────────────────────
+
+sync:
+	$(PIP) install -e ".[dev]"
+
+lock:
+	pip freeze > requirements.lock
+
+doctor:
+	$(PYTHON) scripts/doctor.py
+
+test:
+	$(PYTHON) -m pytest tests/ -q -m "not llm"
+
+selftest:
+	$(PYTHON) scripts/selftest.py
+
+# ── Cleanup ──────────────────────────────────────────────────────────────────
+
+clean: clean-cache clean-data
+	find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+	find . -name "*.pyc" -delete 2>/dev/null || true
+	find . -name "*.egg-info" -type d -exec rm -rf {} + 2>/dev/null || true
+
+clean-cache:
+	rm -rf .pytest_cache .ruff_cache .mypy_cache
+	rm -rf data/cache/
+
+clean-data:
+	rm -rf data/raw/ data/chroma/ data/compliance.db
+	rm -rf logs/ results/
+
+# ── Phase 2+ stubs (not implemented yet) ────────────────────────────────────
+
+ingest:
+	@echo "ERROR: 'make ingest' is not implemented yet (Phase 2)." && exit 1
+
+detect:
+	@echo "ERROR: 'make detect' is not implemented yet (Phase 3)." && exit 1
+
+process:
+	@echo "ERROR: 'make process' is not implemented yet (Phase 4)." && exit 1
+
+eval:
+	@echo "ERROR: 'make eval' is not implemented yet (Phase 7)." && exit 1
+
+demo:
+	@echo "ERROR: 'make demo' is not implemented yet (Phase 9)." && exit 1
+
+serve:
+	@echo "ERROR: 'make serve' is not implemented yet (Phase 6)." && exit 1

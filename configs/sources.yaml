@@ -1,0 +1,18 @@
+sources:
+  - name: eurlex
+    type: eurlex
+    url: "https://eur-lex.europa.eu/search.html?type=named&name=OJ_L&qid=1"
+    schedule_cron: "0 */4 * * *"
+    enabled: true
+
+  - name: eu_sanctions
+    type: sanctions
+    url: "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content"
+    schedule_cron: "0 */2 * * *"
+    enabled: true
+
+  - name: eba
+    type: eba
+    url: "https://www.eba.europa.eu/rss.xml"
+    schedule_cron: "0 */6 * * *"
+    enabled: true
