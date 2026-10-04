@@ -8,7 +8,7 @@ Quick reference for the current project state. Full details in `08_ROADMAP.md`.
 |---|---|---|---|
 | 1 | Scaffolding + safety rails | 🟢 Complete | Phase 2 next |
 | 2 | Ingestion + storage | 🟢 Complete | Phase 3 next |
-| 3 | Change detection | ⚪ Not started | |
+| 3 | Change detection | 🟢 Complete | Phase 4 next |
 | 4 | Intelligence layer (summarize, map) | ⚪ Not started | |
 | 5 | Proposals + routing + approval | ⚪ Not started | |
 | 6 | Dashboard (Streamlit) | ⚪ Not started | |

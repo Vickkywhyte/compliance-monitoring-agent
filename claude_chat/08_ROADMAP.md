@@ -168,7 +168,7 @@ parser safety tests pass.
 
 ---
 
-## Phase 3 — Change detection ⚪
+## Phase 3 — Change detection 🟢
 
 **Goal:** Compare new documents to stored versions; emit `Change` records.
 
