@@ -34,7 +34,7 @@
 
 ---
 
-## Phase 1 — Scaffolding + safety rails ⚪
+## Phase 1 — Scaffolding + safety rails 🟢
 
 **Goal:** A cloneable repo with the prevention mechanisms from Lessons 1, 5, 7,
 8, and 9 already in place. No application logic yet.
