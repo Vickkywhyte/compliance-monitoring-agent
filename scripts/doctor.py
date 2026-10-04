@@ -22,6 +22,17 @@ PUBLIC_MODULES = [
     "compliance_agent.storage.db",
     "compliance_agent.storage.models",
     "compliance_agent.storage.audit",
+    "compliance_agent.storage.documents",
+    "compliance_agent.sources",
+    "compliance_agent.sources.base",
+    "compliance_agent.sources.eurlex",
+    "compliance_agent.sources.sanctions",
+    "compliance_agent.sources.eba",
+    "compliance_agent.sources.registry",
+    "compliance_agent.ingestion",
+    "compliance_agent.ingestion.fetch",
+    "compliance_agent.ingestion.normalize",
+    "compliance_agent.ingestion.orchestrator",
 ]
 
 

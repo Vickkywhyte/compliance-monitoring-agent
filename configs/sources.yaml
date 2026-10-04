@@ -1,3 +1,5 @@
+fixture_mode: false
+
 sources:
   - name: eurlex
     type: eurlex
@@ -13,6 +15,6 @@ sources:
 
   - name: eba
     type: eba
-    url: "https://www.eba.europa.eu/rss.xml"
+    url: "https://www.eba.europa.eu/regulation-and-policy"
     schedule_cron: "0 */6 * * *"
     enabled: true

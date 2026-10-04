@@ -30,6 +30,10 @@ class ParseError(IngestError):
     """Raised when document parsing fails (XML, HTML, or encoding issues)."""
 
 
+class SourceParseError(ParseError):
+    """Raised when XML or HTML parsing of a specific source document fails."""
+
+
 class RateLimitError(ComplianceAgentError):
     """Raised when the LLM gateway rejects a call due to quota exhaustion."""
 

@@ -39,6 +39,7 @@ class SourcesConfig(BaseModel):
     model_config = {"extra": "forbid"}
 
     sources: list[SourceConfig]
+    fixture_mode: bool = False
 
 
 class LLMConfig(BaseModel):

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2024-01-15" globaleSanctionNumber="1" version="1.1" dateGenerated="2024-01-15T00:00:00">
+  <sanctionEntity id="1" euReferenceNumber="EU.2137.1" logicalId="EST-1" unitedNationId="">
+    <subjectType code="E" classificationCode="EFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2024-01-01" entryIntoForceDate="2024-01-02"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:001:TOC"
+                programme="EU" numberTitle="2024/1"/>
+    <nameAlias aliasType="N">
+      <wholeName>Test Sanctioned Entity Ltd</wholeName>
+      <lastName>Entity</lastName>
+      <gender>0</gender>
+    </nameAlias>
+    <remark>Test sanction fixture entry for unit testing. This entity is subject to asset freezing measures under Council Regulation (EU) 2024/1.</remark>
+  </sanctionEntity>
+</export>
