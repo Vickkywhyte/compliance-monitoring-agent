@@ -33,6 +33,11 @@ PUBLIC_MODULES = [
     "compliance_agent.ingestion.fetch",
     "compliance_agent.ingestion.normalize",
     "compliance_agent.ingestion.orchestrator",
+    "compliance_agent.detection",
+    "compliance_agent.detection.stable_id",
+    "compliance_agent.detection.diff",
+    "compliance_agent.detection.detector",
+    "compliance_agent.storage.changes",
 ]
 
 

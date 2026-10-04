@@ -71,6 +71,37 @@ class DocumentRepository:
         ).fetchall()
         return [self._row_to_model(r) for r in rows]
 
+    def list_stable_ids(self, source: str) -> list[str]:
+        """Return all distinct stable_ids stored for the given source."""
+        rows = self._conn.execute(
+            "SELECT DISTINCT stable_id FROM regulatory_documents WHERE source = ?",
+            (source,),
+        ).fetchall()
+        return [row[0] for row in rows]
+
+    def list_latest_by_source(self, source: str) -> list[RegulatoryDocument]:
+        """Return the latest version of each document for the given source."""
+        rows = self._conn.execute(
+            """
+            SELECT d.doc_id, d.source, d.stable_id, d.version, d.title,
+                   d.content, d.content_hash, d.source_url, d.fetched_at,
+                   d.effective_date, d.metadata
+              FROM regulatory_documents d
+             INNER JOIN (
+                 SELECT stable_id, MAX(version) AS max_version
+                   FROM regulatory_documents
+                  WHERE source = ?
+                  GROUP BY stable_id
+             ) latest
+                ON d.stable_id = latest.stable_id
+               AND d.version   = latest.max_version
+             WHERE d.source = ?
+             ORDER BY d.stable_id
+            """,
+            (source, source),
+        ).fetchall()
+        return [self._row_to_model(r) for r in rows]
+
     def get_by_id(self, doc_id: str) -> RegulatoryDocument | None:
         """Return a single document by its ULID doc_id."""
         row = self._conn.execute(

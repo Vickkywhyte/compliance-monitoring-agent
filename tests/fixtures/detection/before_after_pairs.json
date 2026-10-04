@@ -1,0 +1,48 @@
+[
+  {
+    "source": "eurlex",
+    "stable_id": "32024R0001",
+    "before_content": null,
+    "after_content": "Regulation (EU) 2024/0001 introduces new AML requirements for credit institutions operating in member states.",
+    "expected_change_type": "new",
+    "expected_diff_keywords": []
+  },
+  {
+    "source": "eurlex",
+    "stable_id": "32022L0065",
+    "before_content": "Directive on beneficial ownership registers. Compliance deadline: 2023-12-01.",
+    "after_content": "Directive on beneficial ownership registers. Compliance deadline: 2024-06-01. Amended by Council Decision 2024/123.",
+    "expected_change_type": "amended",
+    "expected_diff_keywords": [
+      "-Directive on beneficial ownership registers. Compliance deadline: 2023-12-01.",
+      "+Directive on beneficial ownership registers. Compliance deadline: 2024-06-01."
+    ]
+  },
+  {
+    "source": "sanctions",
+    "stable_id": "EU.2137.1",
+    "before_content": null,
+    "after_content": "Sanctioned entity: Acme International Ltd. Asset freeze. Regulation 269/2014.",
+    "expected_change_type": "new",
+    "expected_diff_keywords": []
+  },
+  {
+    "source": "sanctions",
+    "stable_id": "EU.2001.5",
+    "before_content": "Sanctioned entity: GlobalTrade GmbH. Travel ban. Regulation 269/2014.",
+    "after_content": "Sanctioned entity: GlobalTrade GmbH. Travel ban and asset freeze. Regulation 269/2014 as amended by Decision 2024/456.",
+    "expected_change_type": "amended",
+    "expected_diff_keywords": [
+      "-Sanctioned entity: GlobalTrade GmbH. Travel ban. Regulation 269/2014.",
+      "+Sanctioned entity: GlobalTrade GmbH. Travel ban and asset freeze."
+    ]
+  },
+  {
+    "source": "eba",
+    "stable_id": "https://www.eba.europa.eu/publications/guidelines/gl-2024-01",
+    "before_content": null,
+    "after_content": "EBA Guidelines on internal governance arrangements for credit institutions. Published January 2024.",
+    "expected_change_type": "new",
+    "expected_diff_keywords": []
+  }
+]

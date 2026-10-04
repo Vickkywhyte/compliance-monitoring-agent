@@ -44,3 +44,11 @@ class LLMError(ComplianceAgentError):
 
 class ValidationError(ComplianceAgentError):
     """Raised when a Pydantic model or output vocabulary check fails."""
+
+
+class StableIDError(ComplianceAgentError):
+    """Raised when a stable ID cannot be extracted or fails format validation."""
+
+
+class DiffError(ComplianceAgentError):
+    """Raised when diff computation fails (binary content, oversized input)."""

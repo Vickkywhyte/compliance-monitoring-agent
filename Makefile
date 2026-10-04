@@ -1,5 +1,5 @@
 .PHONY: sync doctor test selftest clean clean-cache clean-data \
-        ingest ingest-selftest detect process eval demo serve lock
+        ingest ingest-selftest detect detect-selftest process eval demo serve lock
 
 # Prefer the activated venv's pip; fall back to the Homebrew Python 3.11
 PIP ?= $(shell command -v pip || echo /opt/homebrew/opt/python@3.11/bin/pip3.11)
@@ -45,10 +45,15 @@ ingest:
 ingest-selftest:
 	$(PYTHON) scripts/02_ingest_selftest.py
 
-# ── Phase 3+ stubs (not implemented yet) ────────────────────────────────────
+# ── Phase 3: detection ───────────────────────────────────────────────────────
 
 detect:
-	@echo "ERROR: 'make detect' is not implemented yet (Phase 3)." && exit 1
+	$(PYTHON) scripts/03_detect.py
+
+detect-selftest:
+	$(PYTHON) scripts/03_detect_selftest.py
+
+# ── Phase 4+ stubs (not implemented yet) ────────────────────────────────────
 
 process:
 	@echo "ERROR: 'make process' is not implemented yet (Phase 4)." && exit 1

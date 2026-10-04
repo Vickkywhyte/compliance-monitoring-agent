@@ -9,6 +9,27 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 3 — Change detection 🟢 (2026-10-04)
+
+### [phase-3] feat(detection): stable ID extraction, unified diff, detector, ChangeRepository
+
+**2026-10-04 — Completed**
+- 9 new files: stable_id extraction (CELEX/sanctions/EBA), unified diff,
+  detector, ChangeRepository, 2 scripts, 15 tests, 1 fixture file
+- Existing files updated: exceptions.py (+StableIDError, DiffError),
+  storage/documents.py (+list_stable_ids, list_latest_by_source),
+  doctor.py (+5 modules → 29 total), Makefile (detect, detect-selftest)
+- Test count: 90 (up from 75, +15 detection tests)
+- Verified: deterministic change IDs (sha256[source|stable_id|version][:16]),
+  idempotent re-detection, unified diff format, stable ID extraction
+  raises StableIDError on failure
+- No LLM calls, no network calls — pure data engineering
+- Known scope decision: withdrawn change_type is defined in the model but
+  not tested in v1 (sources don't reliably provide complete published-ID
+  lists). Deferred to v2 with clear mitigation path.
+
+---
+
 ## Phase 2 — Ingestion + storage 🟢 (2026-10-04)
 
 ### [phase-2] feat(ingestion): source adapters, HTTP fetcher, normalizer, orchestrator, document repository
