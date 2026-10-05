@@ -46,6 +46,7 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 - Total tests: 204 + 8 new = 212
 - All P0 and P1 controls verified implemented
 - ADRs applied: ADR-013
+- Dockerfile fix: source copied before editable install; demo/eval data included in runtime image
 
 ---
 

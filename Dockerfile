@@ -14,11 +14,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /build
 
+# Copy dependency manifests first so Docker caches the deps layer
+# independently of source changes.
 COPY pyproject.toml requirements.lock ./
-
 RUN pip install --upgrade pip \
- && pip install --no-cache-dir -r requirements.lock \
- && pip install --no-cache-dir --no-deps -e .
+ && pip install --no-cache-dir -r requirements.lock
+
+# Copy source before editable install — src/ must exist for `pip install -e .`
+COPY src/ ./src/
+RUN pip install --no-cache-dir --no-deps -e .
 
 # ── Stage 2: runtime ─────────────────────────────────────────────────────────
 FROM python:3.11-slim AS runtime
@@ -43,6 +47,8 @@ COPY src/       ./src/
 COPY configs/   ./configs/
 COPY scripts/   ./scripts/
 COPY data/kb/   ./data/kb/
+COPY data/demo/ ./data/demo/
+COPY data/eval/ ./data/eval/
 
 # CPU-only torch (ADR-013): install after copying app code so the layer
 # is shared across rebuilds that don't change torch.
