@@ -1,0 +1,79 @@
+[
+  {
+    "proposal_id": "01HTEST00000000000000000001",
+    "change_id": "aabbccdd11223344",
+    "mapping_ids": ["01HMAP000000000000000000001"],
+    "assignee_role": "mlro",
+    "category": "screening_update",
+    "severity": "critical",
+    "title": "Update sanctions screening process for new OFAC designations",
+    "description": "Review and update sanctions screening rules to incorporate newly designated entities. Update matching thresholds and test with current customer database.",
+    "deadline": "2026-10-15",
+    "deadline_rationale": "Extracted from regulation text: 'effective 15 October 2026'",
+    "evidence": [
+      {
+        "kind": "mapping",
+        "ref_id": "01HMAP000000000000000000001",
+        "excerpt": "Sanctions screening process requires update for new entity designations"
+      }
+    ],
+    "prompt_version": "propose_v1",
+    "model": "fake",
+    "generated_at": "2026-10-05T10:00:00+00:00",
+    "state": "pending",
+    "version": 1
+  },
+  {
+    "proposal_id": "01HTEST00000000000000000002",
+    "change_id": "aabbccdd11223355",
+    "mapping_ids": ["01HMAP000000000000000000002", "01HMAP000000000000000000003"],
+    "assignee_role": "officer",
+    "category": "policy_update",
+    "severity": "high",
+    "title": "Revise AML policy to align with updated EBA guidelines",
+    "description": "Update the AML policy document sections 3.2 and 4.1 to incorporate new EBA guidance on transaction monitoring thresholds and customer risk scoring.",
+    "deadline": "2026-11-04",
+    "deadline_rationale": "Effective date within 30 days; high severity deadline applied",
+    "evidence": [
+      {
+        "kind": "citation",
+        "ref_id": "01HSUM000000000000000000001",
+        "excerpt": "Credit institutions must update AML controls by 4 November 2026"
+      },
+      {
+        "kind": "mapping",
+        "ref_id": "01HMAP000000000000000000002",
+        "excerpt": "AML policy requires amendment to reflect updated thresholds"
+      }
+    ],
+    "prompt_version": "propose_v1",
+    "model": "fake",
+    "generated_at": "2026-10-05T10:05:00+00:00",
+    "state": "pending",
+    "version": 1
+  },
+  {
+    "proposal_id": "01HTEST00000000000000000003",
+    "change_id": "aabbccdd11223366",
+    "mapping_ids": ["01HMAP000000000000000000004"],
+    "assignee_role": "analyst",
+    "category": "reporting_update",
+    "severity": "low",
+    "title": "Review reporting obligations for updated regulatory framework",
+    "description": "Assess impact of updated reporting framework on current submissions. Update report templates and submission schedules as required.",
+    "deadline": "2027-01-04",
+    "deadline_rationale": "No explicit date in source; 30-day default applied",
+    "evidence": [
+      {
+        "kind": "regulation_text",
+        "ref_id": "aabbccdd11223366",
+        "excerpt": "Financial institutions must update their regulatory reporting processes"
+      }
+    ],
+    "prompt_version": "propose_v1",
+    "model": "fake",
+    "generated_at": "2026-10-05T10:10:00+00:00",
+    "state": "pending",
+    "version": 1
+  }
+]

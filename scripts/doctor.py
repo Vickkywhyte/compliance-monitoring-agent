@@ -51,6 +51,18 @@ PUBLIC_MODULES = [
     "compliance_agent.intelligence.kb",
     "compliance_agent.intelligence.summarizer",
     "compliance_agent.intelligence.mapper",
+    "compliance_agent.intelligence.proposer",
+    "compliance_agent.routing",
+    "compliance_agent.routing.rules",
+    "compliance_agent.routing.router",
+    "compliance_agent.approval",
+    "compliance_agent.approval.service",
+    "compliance_agent.approval.state",
+    "compliance_agent.audit",
+    "compliance_agent.audit.recorder",
+    "compliance_agent.audit.exporter",
+    "compliance_agent.storage.proposals",
+    "compliance_agent.storage.approvals",
 ]
 
 

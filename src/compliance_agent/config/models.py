@@ -91,6 +91,7 @@ class ProposerConfig(BaseModel):
     model_config = {"extra": "forbid"}
 
     max_proposals_per_change: int = 5
+    default_deadline_days: int = 30
 
 
 class AgentConfig(BaseModel):

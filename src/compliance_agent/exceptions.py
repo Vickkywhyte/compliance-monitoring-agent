@@ -56,3 +56,11 @@ class DiffError(ComplianceAgentError):
 
 class LLMUnavailableError(LLMError):
     """Raised when no LLM backend is reachable (Ollama offline, all retries exhausted)."""
+
+
+class ApprovalError(ComplianceAgentError):
+    """Raised when an approval action violates the state machine or business rules."""
+
+
+class ConcurrentModificationError(ApprovalError):
+    """Raised when an optimistic lock check fails (another writer modified the proposal)."""
