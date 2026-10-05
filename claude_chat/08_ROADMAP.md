@@ -467,7 +467,7 @@ Expected: gate passes; schema tests pass.
 
 ---
 
-## Phase 9 — End-to-end pipeline + demo mode ⚪
+## Phase 9 — End-to-end pipeline + demo mode 🟢
 
 **Goal:** Wire all stages together; `make demo` runs the full pipeline
 from a fresh clone in ≤ 5 minutes.
