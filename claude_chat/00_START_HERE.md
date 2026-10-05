@@ -16,7 +16,7 @@ Quick reference for the current project state. Full details in `08_ROADMAP.md`.
 | 8 | Ground truth + golden set | 🟢 Complete | Phase 9 next |
 | 9 | End-to-end pipeline + demo mode | 🟢 Complete | Phase 10 next |
 | 10 | Security hardening + Docker | 🟢 Complete | Phase 11 next |
-| 11 | Documentation + launch | ⚪ Not started | |
+| 11 | Documentation + launch | 🟢 Complete | All phases done |
 
 ## Last checkpoint (Phase 1)
 

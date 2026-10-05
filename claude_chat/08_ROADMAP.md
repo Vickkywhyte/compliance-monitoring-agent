@@ -539,7 +539,7 @@ Expected: security tests pass; audit clean; compose starts; dashboard responds.
 
 ---
 
-## Phase 11 — Documentation + launch ⚪
+## Phase 11 — Documentation + launch 🟢
 
 **Goal:** Public-facing polish; README; architecture diagram; screenshots;
 push to GitHub.

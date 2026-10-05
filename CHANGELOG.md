@@ -9,32 +9,22 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
-## Phase 5 — Proposals + routing + approval 🟢 (2026-10-05)
+## Phase 11 — Documentation + launch 🟢 (2026-10-05)
 
-### Phase 5 — Proposals + routing + approval
+### Phase 11 — Documentation + launch
 **2026-10-05 — Completed**
-- 19 new files: proposer (rules + LLM hybrid), routing (rule engine
-  + router), approval (service + state machine), audit (recorder +
-  exporter), storage (proposals + approvals repos), selftest, 4 test
-  files, 1 fixture
-- 5 updated files: exceptions.py (+ApprovalError,
-  +ConcurrentModificationError), agent.yaml (+proposer config),
-  pyproject.toml (+reportlab), config/models.py
-  (+default_deadline_days), doctor.py (+12 modules), Makefile
-  (+approve-selftest)
-- Total tests: 144 (up from 115, +29 Phase 5 tests)
-- Security controls verified in this phase: C-18, C-19, C-20, C-21, C-22
-  - C-18: single-writer for proposal state (only ApprovalService mutates)
-  - C-19: optimistic locking on every state transition
-  - C-20: audit event written in same transaction as state change
-  - C-21: concurrent approval test spawns 5 real threads against a
-    file-based SQLite DB; exactly 1 winner (BEGIN IMMEDIATE + version lock)
-  - C-22: rejected proposal cannot be approved; approved proposal cannot
-    be modified (terminal states enforced by state machine)
-- ADRs applied: ADR-008, ADR-009, ADR-010
-- Rules vs LLM separation verified by empty grep: LLM never produces
-  severity or deadline
-- Router contains no LLM calls (rules-only)
+- README.md: full public-facing rewrite — TL;DR, architecture diagram,
+  agent reasoning steps, evaluation results table (20 metrics from
+  results/evals/), security summary (39 controls, STRIDE), quick start,
+  design decisions table (18 ADRs), project structure
+- CONTRIBUTING.md: setup, commit format, what not to do, PR checklist
+- LICENSE: MIT, Victor Daniel
+- docs/screenshots/.gitkeep: placeholder directory for UI screenshots
+- docs/demo.md: 60-second demo script with talking points and Q&A
+- All 11 phases marked 🟢 in claude_chat/08_ROADMAP.md and
+  claude_chat/00_START_HERE.md
+- CI badge wired in README pointing to .github/workflows/ci.yml
+- ADRs applied: ADR-013 (Docker), referenced ADR-001 to ADR-018 in README
 
 ---
 
@@ -156,6 +146,35 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
   reject); no bypass path exists
 - ADRs applied: ADR-009 (human-in-the-loop), ADR-013 (Docker Compose)
 - Dashboard selftest covers all 16 modules + 7 pure-function assertions
+
+---
+
+## Phase 5 — Proposals + routing + approval 🟢 (2026-10-05)
+
+### Phase 5 — Proposals + routing + approval
+**2026-10-05 — Completed**
+- 19 new files: proposer (rules + LLM hybrid), routing (rule engine
+  + router), approval (service + state machine), audit (recorder +
+  exporter), storage (proposals + approvals repos), selftest, 4 test
+  files, 1 fixture
+- 5 updated files: exceptions.py (+ApprovalError,
+  +ConcurrentModificationError), agent.yaml (+proposer config),
+  pyproject.toml (+reportlab), config/models.py
+  (+default_deadline_days), doctor.py (+12 modules), Makefile
+  (+approve-selftest)
+- Total tests: 144 (up from 115, +29 Phase 5 tests)
+- Security controls verified in this phase: C-18, C-19, C-20, C-21, C-22
+  - C-18: single-writer for proposal state (only ApprovalService mutates)
+  - C-19: optimistic locking on every state transition
+  - C-20: audit event written in same transaction as state change
+  - C-21: concurrent approval test spawns 5 real threads against a
+    file-based SQLite DB; exactly 1 winner (BEGIN IMMEDIATE + version lock)
+  - C-22: rejected proposal cannot be approved; approved proposal cannot
+    be modified (terminal states enforced by state machine)
+- ADRs applied: ADR-008, ADR-009, ADR-010
+- Rules vs LLM separation verified by empty grep: LLM never produces
+  severity or deadline
+- Router contains no LLM calls (rules-only)
 
 ---
 
