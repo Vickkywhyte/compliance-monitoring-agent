@@ -79,6 +79,21 @@ PUBLIC_MODULES = [
     "compliance_agent.dashboard.views.change_detail",
     "compliance_agent.dashboard.views.audit_trail",
     "compliance_agent.dashboard.views.digest",
+    # Phase 7: evaluation harness
+    "compliance_agent.evaluation",
+    "compliance_agent.evaluation.metrics",
+    "compliance_agent.evaluation.metrics.base",
+    "compliance_agent.evaluation.metrics.coverage",
+    "compliance_agent.evaluation.metrics.mapping",
+    "compliance_agent.evaluation.metrics.proposal",
+    "compliance_agent.evaluation.metrics.routing",
+    "compliance_agent.evaluation.metrics.operational",
+    "compliance_agent.evaluation.metrics.summary",
+    "compliance_agent.evaluation.stats",
+    "compliance_agent.evaluation.judge",
+    "compliance_agent.evaluation.golden",
+    "compliance_agent.evaluation.runner",
+    "compliance_agent.evaluation.report",
 ]
 
 

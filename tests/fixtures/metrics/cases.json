@@ -1,0 +1,140 @@
+{
+  "detection_recall": {
+    "golden": {"id": "dr-1", "expected_mappings": [{"process_id": "aml", "impact_type": "new_obligation"}]},
+    "actual_detected": {"detected": true},
+    "actual_missed": {"detected": false}
+  },
+  "detection_precision": {
+    "golden_list": [
+      {"id": "dp-1", "expected_mappings": [{"process_id": "aml", "impact_type": "new_obligation"}]},
+      {"id": "dp-2", "expected_mappings": [{"process_id": "kyc", "impact_type": "amendment"}]}
+    ],
+    "actual_list": [
+      {"detected": true, "fp_count": 1},
+      {"detected": true, "fp_count": 1}
+    ]
+  },
+  "mapping_precision": {
+    "golden": {
+      "id": "mp-1",
+      "expected_mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation"},
+        {"process_id": "kyc", "impact_type": "amendment"}
+      ]
+    },
+    "actual_two_correct": {
+      "mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation", "confidence": 0.9},
+        {"process_id": "kyc", "impact_type": "amendment", "confidence": 0.8}
+      ]
+    },
+    "actual_one_wrong": {
+      "mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation", "confidence": 0.9},
+        {"process_id": "sanctions_screening", "impact_type": "amendment", "confidence": 0.7}
+      ]
+    }
+  },
+  "mapping_recall": {
+    "golden": {
+      "id": "mr-1",
+      "expected_mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation"},
+        {"process_id": "kyc", "impact_type": "amendment"}
+      ]
+    },
+    "actual_all": {
+      "mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation", "confidence": 0.9},
+        {"process_id": "kyc", "impact_type": "amendment", "confidence": 0.8}
+      ]
+    },
+    "actual_partial": {
+      "mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation", "confidence": 0.9}
+      ]
+    }
+  },
+  "confidence_brier": {
+    "golden": {
+      "id": "cb-1",
+      "expected_mappings": [
+        {"process_id": "aml", "impact_type": "new_obligation"}
+      ]
+    },
+    "actual_perfect": {
+      "mappings": [{"process_id": "aml", "impact_type": "new_obligation", "confidence": 1.0}]
+    },
+    "actual_wrong": {
+      "mappings": [{"process_id": "aml", "impact_type": "new_obligation", "confidence": 0.0}]
+    }
+  },
+  "proposal_rates": {
+    "golden": {"id": "pr-1"},
+    "actual_approve": {"action": "approve"},
+    "actual_edit": {"action": "edit_approve"},
+    "actual_reject": {"action": "reject"}
+  },
+  "routing_accuracy": {
+    "golden": {
+      "id": "ra-1",
+      "expected_proposals": [{"assignee_role": "compliance_officer"}]
+    },
+    "actual_correct": {"proposals": [{"assignee_role": "compliance_officer"}]},
+    "actual_wrong": {"proposals": [{"assignee_role": "risk_manager"}]}
+  },
+  "deadline_accuracy": {
+    "golden": {
+      "id": "da-1",
+      "expected_deadline": "2026-11-05"
+    },
+    "actual_exact": {"proposals": [{"deadline": "2026-11-05"}]},
+    "actual_off_by_one": {"proposals": [{"deadline": "2026-11-06"}]},
+    "actual_off_by_five": {"proposals": [{"deadline": "2026-11-10"}]}
+  },
+  "severity_accuracy": {
+    "golden": {
+      "id": "sa-1",
+      "expected_severity": "high",
+      "expected_proposals": [{"severity": "high"}]
+    },
+    "actual_correct": {"proposals": [{"severity": "high"}]},
+    "actual_wrong": {"proposals": [{"severity": "medium"}]}
+  },
+  "operational": {
+    "golden": {"id": "op-1"},
+    "actual_fast": {
+      "latency_ms": 2500.0,
+      "cost_usd": 0.05,
+      "fallback_calls": 0,
+      "llm_calls": 5,
+      "audit_complete": true,
+      "bypassed": false
+    },
+    "actual_slow": {
+      "latency_ms": 15000.0,
+      "cost_usd": 0.20,
+      "fallback_calls": 2,
+      "llm_calls": 5,
+      "audit_complete": false,
+      "bypassed": true
+    }
+  },
+  "summary_faithfulness": {
+    "golden": {"id": "sf-1"},
+    "actual_all_yes": {"entailments": ["yes", "yes", "yes"]},
+    "actual_mixed": {"entailments": ["yes", "partial", "no"]},
+    "actual_empty": {"entailments": []}
+  },
+  "summary_hallucination": {
+    "golden": {"id": "sh-1"},
+    "actual_no_hallucination": {"entailments": ["yes", "yes"]},
+    "actual_mixed": {"entailments": ["yes", "partial", "no"]}
+  },
+  "summary_rubric": {
+    "golden": {"id": "sr-1"},
+    "actual_raw_5": {"rubric_score": 5},
+    "actual_raw_3": {"rubric_score": 3},
+    "actual_normalized": {"rubric_score": 0.8}
+  }
+}

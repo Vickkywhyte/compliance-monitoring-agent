@@ -64,3 +64,7 @@ class ApprovalError(ComplianceAgentError):
 
 class ConcurrentModificationError(ApprovalError):
     """Raised when an optimistic lock check fails (another writer modified the proposal)."""
+
+
+class GoldenValidationError(ComplianceAgentError):
+    """Raised when a golden-set entry fails the quality gate."""

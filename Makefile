@@ -1,7 +1,7 @@
 .PHONY: sync doctor test selftest clean clean-cache clean-data \
         ingest ingest-selftest detect detect-selftest \
         process process-selftest approve-selftest dashboard-selftest \
-        eval demo serve lock
+        eval eval-selftest demo serve lock
 
 # Prefer the activated venv's pip; fall back to the Homebrew Python 3.11
 PIP ?= $(shell command -v pip || echo /opt/homebrew/opt/python@3.11/bin/pip3.11)
@@ -74,7 +74,11 @@ dashboard-selftest:
 	$(PYTHON) scripts/dashboard_selftest.py
 
 eval:
-	@echo "ERROR: 'make eval' is not implemented yet (Phase 7)." && exit 1
+	$(PYTHON) scripts/07_eval.py --fixture-llm --skip-file-checks \
+		--golden data/eval/golden.jsonl
+
+eval-selftest:
+	$(PYTHON) scripts/07_eval_selftest.py
 
 demo:
 	@echo "ERROR: 'make demo' is not implemented yet (Phase 9)." && exit 1

@@ -38,6 +38,33 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 7 — Evaluation harness 🟢 (2026-10-05)
+
+### Phase 7 — Evaluation harness
+**2026-10-05 — Completed**
+- 18 new files: Metric ABC + 7 metric modules (20 concrete metrics
+  across coverage, summary, mapping, proposal, routing, operational),
+  judge + 2 versioned judge prompts, golden loader with quality gate,
+  runner, report renderer, bootstrap CI, 2 scripts, 3 test files,
+  1 fixture file
+- 3 updated files: Makefile (+eval, +eval-selftest), doctor.py
+  (+14 modules → 84), eval.yaml
+- Total tests: 185 (up from 154, +31 Phase 7 tests)
+- Judge uses fence() on all untrusted content (C-01, C-02)
+- Judge prompts (entailment_v1, rubric_v1) contain the system preamble
+  from _shared_v1.txt; both require UNTRUSTED_SOURCE_CONTENT fencing
+- Bootstrap CI: deterministic with seed, works on lists AND numpy,
+  raises on empty input
+- Golden quality gate catches 8 failure modes
+- All 20 metrics from 06_EVAL_SPEC.md §3-§6 implemented and tested
+- 06_EVAL_SPEC.md §9 fixtures covered; test naming uses
+  actual_detected/actual_missed/actual_perfect/actual_wrong
+  (semantically equivalent to spec's perfect_detection / one_missed /
+  calibrated_confidence / overconfident)
+- ADRs applied: ADR-011, ADR-012, ADR-015
+
+---
+
 ## Phase 6 — Dashboard (Streamlit) 🟢 (2026-10-05)
 
 ### Phase 6 — Dashboard (Streamlit)
