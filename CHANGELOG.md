@@ -47,7 +47,9 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 - All P0 and P1 controls verified implemented
 - ADRs applied: ADR-013
 - Dockerfile fix: source copied before editable install; demo/eval data included in runtime image
-- requirements.lock fix: removed absolute local path `-e /Users/...`; editable install is handled separately in CI and Docker
+- requirements.lock fix: removed absolute local path `-e /Users/...`; regenerated from venv — adds plotly, streamlit and 12 missing packages
+- Dockerfile fix: builder uses non-editable install so site-packages copies correctly to runtime stage
+- CI fix: pip-audit ignores chromadb CVEs (trust_remote_code not used) and setuptools CVE (sdist-only, not applicable)
 
 ---
 

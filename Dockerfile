@@ -20,9 +20,10 @@ COPY pyproject.toml requirements.lock ./
 RUN pip install --upgrade pip \
  && pip install --no-cache-dir -r requirements.lock
 
-# Copy source before editable install — src/ must exist for `pip install -e .`
+# Non-editable install so site-packages contains the dist-info and can be
+# copied to the runtime stage without the build directory being present.
 COPY src/ ./src/
-RUN pip install --no-cache-dir --no-deps -e .
+RUN pip install --no-cache-dir --no-deps .
 
 # ── Stage 2: runtime ─────────────────────────────────────────────────────────
 FROM python:3.11-slim AS runtime
