@@ -11,6 +11,27 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ## Phase 4 — Intelligence layer (summarize, map) 🟢 (2026-10-04)
 
+### Phase 4 — Intelligence layer
+**2026-10-05 — Completed**
+- LLM layer: LLMBackend ABC, LLMGateway (threading.Semaphore(4),
+  queue_max 100, jittered backoff, Ollama fallback after 3 consecutive
+  429s), OpenRouterBackend, OllamaBackend, PromptRegistry with disk cache
+- Intelligence layer: fence() (escape-then-wrap, verified against
+  fence-escape attack), index_knowledge_base(), Summarizer
+  (citations sourced from doc.content span, never LLM), Mapper
+  (top-K retrieval, drops low-confidence / invalid impact / unknown
+  section IDs)
+- Prompt versioning: _shared_v1.txt, summarize_v1.txt, map_v1.txt;
+  prompt_version recorded on every Summary/ProcessMapping
+- Storage: SummaryRepository, ProcessMappingRepository
+- Knowledge base: 6 process documents indexed in Chroma via MiniLM
+- Test infrastructure: FakeLLMBackend with call recording
+- Security: 10 prompt-injection scenarios + 5 rate-limit tests, all pass
+- Total tests: 115 (up from 90)
+- Security controls verified: C-01, C-02, C-03, C-04, C-05, C-26, C-27,
+  C-28, C-33, C-34, C-35
+- ADRs applied: ADR-004, ADR-014, ADR-015, ADR-016, ADR-018
+
 ### [phase-4] feat(intelligence): LLM gateway, summarizer, mapper, prompt injection defense
 
 **2026-10-04 — Completed**
