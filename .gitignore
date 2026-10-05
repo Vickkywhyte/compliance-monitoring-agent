@@ -42,3 +42,6 @@ htmlcov/
 *.swp
 *.swo
 .DS_Store
+
+data/compliance.db-shm
+data/compliance.db-wal
