@@ -47,6 +47,7 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 - All P0 and P1 controls verified implemented
 - ADRs applied: ADR-013
 - Dockerfile fix: source copied before editable install; demo/eval data included in runtime image
+- requirements.lock fix: removed absolute local path `-e /Users/...`; editable install is handled separately in CI and Docker
 
 ---
 
