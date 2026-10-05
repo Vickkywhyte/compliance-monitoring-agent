@@ -38,6 +38,27 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 10 — Security hardening + Docker 🟢 (2026-10-05)
+
+### Phase 10 — Security hardening + Docker
+**2026-10-05 — Completed**
+- Dockerfile: multi-stage build, CPU-only torch, poppler/tesseract/magic
+  system deps, image size target < 3 GB
+- docker-compose.yml: app service with healthcheck, data/logs/results
+  volumes, optional Ollama sidecar via profile
+- .dockerignore excludes .env and all generated artifacts
+- .github/workflows/ci.yml: test + pip-audit jobs
+- .gitattributes: line-ending normalization
+- .github/pull_request_template.md: security checklist in PR template
+- docs/security.md: public-facing threat model summary
+- tests/security/test_error_envelopes.py (C-36, C-37)
+- tests/security/test_dependency_pinning.py (C-29, C-30)
+- Total tests: 204 + 8 new = 212
+- All P0 and P1 controls verified implemented
+- ADRs applied: ADR-013
+
+---
+
 ## Phase 9 — End-to-end pipeline + demo mode 🟢 (2026-10-05)
 
 ### Phase 9 — End-to-end pipeline + demo mode

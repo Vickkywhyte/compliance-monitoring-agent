@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  # No live LLM calls in CI — use fixture mode (C-32: lockfile-only installs)
+  USE_HOSTED: "false"
+  FIXTURE_MODE: "true"
+  PYTHONPATH: src
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies from lockfile (C-32)
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install --no-deps -e .
+
+      - name: Run tests (no llm marker)
+        run: |
+          python -m pytest tests/ -q -m "not llm" --tb=short
+
+      - name: Run security tests
+        run: |
+          python -m pytest tests/security/ -v --tb=short
+
+  security-audit:
+    name: Dependency audit (C-31)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Install project dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install --no-deps -e .
+
+      - name: Run pip-audit (fail on HIGH severity)
+        run: |
+          pip-audit --requirement requirements.lock --desc on \
+            --ignore-vuln PYSEC-2024-230 || true
+          # Full audit of installed env — fails CI on any high/critical finding
+          pip-audit --desc on
+
+  docker-build:
+    name: Docker build (smoke test)
+    runs-on: ubuntu-latest
+    # Only run on main to avoid burning time on every draft PR
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t compliance-agent:ci .
+
+      - name: Verify image starts
+        run: |
+          docker run --rm --entrypoint python compliance-agent:ci \
+            -c "import compliance_agent; print('import OK')"

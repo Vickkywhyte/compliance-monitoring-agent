@@ -1,0 +1,55 @@
+# Secrets — MUST NOT be copied into image
+.env
+.env.*
+
+# Python artefacts
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Generated / volatile data
+data/raw/
+data/processed/
+data/indexes/
+data/cache/
+data/chroma/
+data/compliance.db
+logs/
+results/
+
+# VCS
+.git/
+.gitignore
+.gitattributes
+
+# Dev tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.pre-commit-config.yaml
+
+# Editor / OS
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Docs and planning (not needed at runtime)
+claude_chat/
+docs/
+notebooks/
+*.md
+!data/kb/
+
+# CI
+.github/

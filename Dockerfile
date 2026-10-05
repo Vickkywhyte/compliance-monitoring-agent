@@ -1,13 +1,59 @@
-# STUB — finalized in Phase 10 (multi-stage, CPU-only torch)
-# Uncomment and configure when Phase 10 is reached.
+# Multi-stage build — Phase 10 (ADR-013)
+# Stage 1: builder installs all Python dependencies into site-packages.
+# Stage 2: runtime copies only the installed site-packages + app code;
+#           installs CPU-only torch separately to keep the image lean.
+# Image size target: < 3 GB
 
-FROM python:3.11-slim
+# ── Stage 1: builder ─────────────────────────────────────────────────────────
+FROM python:3.11-slim AS builder
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+
+COPY pyproject.toml requirements.lock ./
+
+RUN pip install --upgrade pip \
+ && pip install --no-cache-dir -r requirements.lock \
+ && pip install --no-cache-dir --no-deps -e .
+
+# ── Stage 2: runtime ─────────────────────────────────────────────────────────
+FROM python:3.11-slim AS runtime
+
+# System dependencies required by the application
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        poppler-utils \
+        tesseract-ocr \
+        curl \
+        libmagic1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy installed packages from builder
+COPY --from=builder /usr/local/lib/python3.11/site-packages \
+                    /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
 
 WORKDIR /app
 
-# COPY pyproject.toml requirements.lock ./
-# RUN pip install --no-cache-dir -r requirements.lock
-# COPY src/ ./src/
-# COPY configs/ ./configs/
+# Application code — only what is needed at runtime
+COPY src/       ./src/
+COPY configs/   ./configs/
+COPY scripts/   ./scripts/
+COPY data/kb/   ./data/kb/
 
-# CMD ["python", "-m", "compliance_agent"]
+# CPU-only torch (ADR-013): install after copying app code so the layer
+# is shared across rebuilds that don't change torch.
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# Non-root user for defence-in-depth
+RUN useradd --create-home --uid 1000 agent \
+ && chown -R agent:agent /app
+USER agent
+
+EXPOSE 8000 8501
+
+CMD ["streamlit", "run", "src/compliance_agent/dashboard/app.py", \
+     "--server.port", "8501", "--server.address", "0.0.0.0"]

@@ -501,7 +501,7 @@ Expected: demo opens in browser; integration test passes.
 
 ---
 
-## Phase 10 — Security hardening + Docker ⚪
+## Phase 10 — Security hardening + Docker 🟢
 
 **Goal:** Implement P1 controls; finalize Docker; verify all security tests.
 

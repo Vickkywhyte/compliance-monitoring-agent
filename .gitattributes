@@ -1,0 +1,26 @@
+# Normalize line endings to LF on commit (CRLF → LF for text files)
+* text=auto eol=lf
+
+# Force LF for shell scripts and Python
+*.py    text eol=lf
+*.sh    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.toml  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+*.lock  text eol=lf
+
+# Binary — never diff or convert
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.db    binary
+*.pyc   binary
