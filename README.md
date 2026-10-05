@@ -202,6 +202,23 @@ docker compose --profile with-ollama up
 
 Copy `.env.example` to `.env` and configure. The system runs in demo mode with a fake LLM backend if no API key is set.
 
+## Screenshots
+
+### Live Feed
+![Live Feed](docs/screenshots/live-feed.png)
+*Six demo regulatory changes flowing through the pipeline: sources, types,
+severity, and pending state.*
+
+### Approval Queue
+![Approval Queue](docs/screenshots/queue.png)
+*Proposals awaiting human approval. Filtered by role. Approve, edit+approve,
+or reject with reason.*
+
+### Change Detail with Audit Trail
+![Change Detail](docs/screenshots/change-detail.png)
+*Full context for one change: summary with citations, process mappings,
+proposals, and the complete audit chain.*
+
 ## Configuration
 
 All configuration lives in `configs/`. No `os.getenv` outside `config/loader.py` (ADR-017).
