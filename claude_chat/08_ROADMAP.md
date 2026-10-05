@@ -321,7 +321,7 @@ Expected: all pass; concurrency test proves single-winner; audit chain test pass
 
 ---
 
-## Phase 6 — Dashboard (Streamlit) ⚪
+## Phase 6 — Dashboard (Streamlit) 🟢
 
 **Goal:** Three views: live feed, approval queue, change detail with audit trail.
 
