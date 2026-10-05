@@ -1,6 +1,7 @@
 .PHONY: sync doctor test selftest clean clean-cache clean-data \
         ingest ingest-selftest detect detect-selftest \
-        process process-selftest approve-selftest eval demo serve lock
+        process process-selftest approve-selftest dashboard-selftest \
+        eval demo serve lock
 
 # Prefer the activated venv's pip; fall back to the Homebrew Python 3.11
 PIP ?= $(shell command -v pip || echo /opt/homebrew/opt/python@3.11/bin/pip3.11)
@@ -67,6 +68,11 @@ process-selftest:
 approve-selftest:
 	$(PYTHON) scripts/05_approve_selftest.py
 
+# ── Phase 6: dashboard ────────────────────────────────────────────────────────
+
+dashboard-selftest:
+	$(PYTHON) scripts/dashboard_selftest.py
+
 eval:
 	@echo "ERROR: 'make eval' is not implemented yet (Phase 7)." && exit 1
 
@@ -74,4 +80,5 @@ demo:
 	@echo "ERROR: 'make demo' is not implemented yet (Phase 9)." && exit 1
 
 serve:
-	@echo "ERROR: 'make serve' is not implemented yet (Phase 6)." && exit 1
+	streamlit run src/compliance_agent/dashboard/app.py \
+		--server.port 8501 --server.address 0.0.0.0

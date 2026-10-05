@@ -63,6 +63,22 @@ PUBLIC_MODULES = [
     "compliance_agent.audit.exporter",
     "compliance_agent.storage.proposals",
     "compliance_agent.storage.approvals",
+    "compliance_agent.dashboard",
+    "compliance_agent.dashboard.theme",
+    "compliance_agent.dashboard.state",
+    "compliance_agent.dashboard.app",
+    "compliance_agent.dashboard.charts",
+    "compliance_agent.dashboard.components",
+    "compliance_agent.dashboard.components.severity_badge",
+    "compliance_agent.dashboard.components.citation",
+    "compliance_agent.dashboard.components.evidence_list",
+    "compliance_agent.dashboard.components.header",
+    "compliance_agent.dashboard.views",
+    "compliance_agent.dashboard.views.feed",
+    "compliance_agent.dashboard.views.queue",
+    "compliance_agent.dashboard.views.change_detail",
+    "compliance_agent.dashboard.views.audit_trail",
+    "compliance_agent.dashboard.views.digest",
 ]
 
 

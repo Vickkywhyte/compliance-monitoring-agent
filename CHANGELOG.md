@@ -38,6 +38,27 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 6 — Dashboard (Streamlit) 🟢 (2026-10-05)
+
+### Phase 6 — Dashboard (Streamlit)
+**2026-10-05 — Completed**
+- 18 new files: 5 views (feed, queue, change_detail, audit_trail, digest),
+  4 components (header, severity_badge, citation, evidence_list),
+  app/state/theme/charts modules, dashboard selftest, dashboard views test
+- 3 updated files: pyproject.toml (+streamlit, +plotly), Makefile
+  (+serve, +dashboard-selftest), doctor.py (+16 dashboard modules → 70)
+- Total tests: 154 (up from 144, +10 Phase 6 tests)
+- Security control verified: C-18 — approval queue calls ApprovalService,
+  never ProposalRepository writes directly
+  (test_queue_module_does_not_import_proposal_repository_directly)
+- Charts (charts.py) are pure functions — no Streamlit imports; testable
+- Approval actions in the UI route through ApprovalService (edit_approve,
+  reject); no bypass path exists
+- ADRs applied: ADR-009 (human-in-the-loop), ADR-013 (Docker Compose)
+- Dashboard selftest covers all 16 modules + 7 pure-function assertions
+
+---
+
 ## Phase 4 — Intelligence layer (summarize, map) 🟢 (2026-10-04)
 
 ### Phase 4 — Intelligence layer

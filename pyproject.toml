@@ -20,6 +20,8 @@ dependencies = [
     "ulid-py>=1.1.0",
     "pyyaml>=6.0.2",
     "reportlab>=4.2.0",
+    "streamlit>=1.40.0",
+    "plotly>=5.20",
 ]
 
 [project.optional-dependencies]
