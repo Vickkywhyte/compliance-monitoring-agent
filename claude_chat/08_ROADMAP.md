@@ -426,7 +426,7 @@ Expected: all fixtures pass; eval report produced; gate test rejects bad entry.
 
 ---
 
-## Phase 8 — Ground truth + golden set ⚪
+## Phase 8 — Ground truth + golden set 🟢
 
 **Goal:** Curate 50+ labeled regulatory changes; validate; commit.
 
