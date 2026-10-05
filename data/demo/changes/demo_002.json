@@ -1,0 +1,14 @@
+{
+  "id": "demo_002",
+  "title": "New Sanctions Listing: Synthetix Trading Corp",
+  "source": "sanctions",
+  "stable_id": "EST-2024-0042",
+  "change_type": "new",
+  "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:0042:TOC",
+  "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<export date=\"2024-04-02\" globaleSanctionNumber=\"42\" version=\"1.1\" dateGenerated=\"2024-04-02T00:00:00\">\n  <sanctionEntity id=\"42\" euReferenceNumber=\"EU.2137.42\" logicalId=\"EST-2024-0042\" unitedNationId=\"\">\n    <subjectType code=\"E\" classificationCode=\"EFSC\"/>\n    <regulation regulationType=\"EU\" organisationType=\"COUNCIL\"\n                publicationDate=\"2024-04-01\" entryIntoForceDate=\"2024-04-02\"\n                publicationUrl=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:0042:TOC\"\n                programme=\"UKRAINE\" numberTitle=\"2024/0042\"/>\n    <nameAlias aliasType=\"N\">\n      <wholeName>Synthetix Trading Corp</wholeName>\n      <firstName>Synthetix</firstName>\n      <lastName>Trading Corp</lastName>\n      <gender>0</gender>\n    </nameAlias>\n    <nameAlias aliasType=\"A\">\n      <wholeName>STC Holdings Ltd</wholeName>\n    </nameAlias>\n    <remark>Asset freezing measures apply with immediate effect from 2 April 2024. Financial institutions must freeze all assets and report any known assets to competent authorities within 10 business days.</remark>\n  </sanctionEntity>\n</export>",
+  "expected_summary_keywords": ["Synthetix Trading Corp", "asset freeze", "Ukraine", "STC Holdings"],
+  "expected_mappings": [
+    {"process_id": "sanctions_screening", "impact_type": "add_screening"},
+    {"process_id": "transaction_monitoring", "impact_type": "modify_screening"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "demo_003",
+  "title": "Amended: Transaction Monitoring Thresholds (32023R0956)",
+  "source": "eurlex",
+  "stable_id": "32023R0956",
+  "change_type": "amended",
+  "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956",
+  "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<RESULTS>\n  <NOTICE>\n    <CELEX>32023R0956</CELEX>\n    <TITLE lang=\"EN\">Regulation (EU) 2023/956 as amended by Regulation (EU) 2024/2156 on transaction monitoring thresholds</TITLE>\n    <DATE_DOCUMENT>2024-09-01</DATE_DOCUMENT>\n    <EFFECTIVE_DATE>2024-10-01</EFFECTIVE_DATE>\n    <CONTENTS>Article 2(1) - Enhanced monitoring threshold: EUR 5,000 per single transaction (previously EUR 10,000). Article 2(3) - Aggregate monitoring threshold: EUR 15,000 per calendar month per customer (previously EUR 25,000). Article 3(2) - Monitoring rules review frequency: semi-annually (previously annually). Article 4 - SAR review deadline: 24 hours from alert generation (previously 48 hours). Article 5 - Data retention: 7 years (previously 5 years). These amendments apply from 1 October 2024.</CONTENTS>\n  </NOTICE>\n</RESULTS>",
+  "previous_raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<RESULTS>\n  <NOTICE>\n    <CELEX>32023R0956</CELEX>\n    <TITLE lang=\"EN\">Regulation (EU) 2023/956 on transaction monitoring thresholds</TITLE>\n    <DATE_DOCUMENT>2023-10-01</DATE_DOCUMENT>\n    <EFFECTIVE_DATE>2023-11-01</EFFECTIVE_DATE>\n    <CONTENTS>Article 2(1) - Enhanced monitoring threshold: EUR 10,000 per single transaction. Article 2(3) - Aggregate monitoring threshold: EUR 25,000 per calendar month per customer. Article 3(2) - Monitoring rules review frequency: annually. Article 4 - SAR review deadline: 48 hours from alert generation. Article 5 - Data retention: 5 years.</CONTENTS>\n  </NOTICE>\n</RESULTS>",
+  "expected_summary_keywords": ["EUR 5,000", "EUR 15,000", "semi-annually", "24 hours", "7 years"],
+  "expected_mappings": [
+    {"process_id": "transaction_monitoring", "impact_type": "modify_control"},
+    {"process_id": "aml", "impact_type": "modify_control"}
+  ]
+}

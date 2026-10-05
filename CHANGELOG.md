@@ -38,6 +38,33 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 9 — End-to-end pipeline + demo mode 🟢 (2026-10-05)
+
+### Phase 9 — End-to-end pipeline + demo mode
+**2026-10-05 — Completed**
+- src/compliance_agent/pipeline.py — orchestration: ingest -> detect ->
+  summarize -> map -> propose -> route; correlation_id per run;
+  per-change fail-soft; PipelineReport with per_change list
+- data/demo/ — 6 pre-scripted regulatory changes; seed script isolated
+  to data/demo/changes/ only
+- scripts/09_demo.py — one-command demo: reset DB, seed, run pipeline,
+  optionally launch dashboard; --no-serve flag for CI/testing
+- tests/test_pipeline_integration.py — 10 tests including pipeline runs
+  end-to-end, pipeline does NOT bypass ApprovalService (C-18 guard),
+  correlation_id consistency, per_change list matches counter
+- Total tests: 204 (up from 194)
+- Two real bugs fixed during verification:
+  1. changes_detected counter semantics (was counting "newly detected"
+     not "changes to process") — fixed by counting all_changes and
+     exposing per_change list to prevent structural drift
+  2. seed.py created withdrawn changes at version 2 when only version 1
+     existed, causing detect() to insert a spurious 'new' change — fixed
+     to seed at latest.version with prev_version=None
+- ADRs applied: ADR-009 (pipeline creates proposals in pending state;
+  no auto-approval)
+
+---
+
 ## Phase 8 — Ground truth + golden set 🟢 (2026-10-05)
 
 ### Phase 8 — Ground truth + golden set

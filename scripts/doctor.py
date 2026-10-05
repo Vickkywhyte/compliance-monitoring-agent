@@ -79,6 +79,8 @@ PUBLIC_MODULES = [
     "compliance_agent.dashboard.views.change_detail",
     "compliance_agent.dashboard.views.audit_trail",
     "compliance_agent.dashboard.views.digest",
+    # Phase 9: pipeline orchestrator
+    "compliance_agent.pipeline",
     # Phase 7: evaluation harness
     "compliance_agent.evaluation",
     "compliance_agent.evaluation.metrics",

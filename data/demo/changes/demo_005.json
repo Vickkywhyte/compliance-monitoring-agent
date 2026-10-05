@@ -1,0 +1,11 @@
+{
+  "id": "demo_005",
+  "title": "Withdrawn Sanctions Listing: Dmitri Volkov",
+  "source": "sanctions",
+  "stable_id": "EST-2022-0333",
+  "change_type": "withdrawn",
+  "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2022:0333:TOC",
+  "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<export date=\"2024-10-01\" globaleSanctionNumber=\"333\" version=\"1.1\" dateGenerated=\"2024-10-01T00:00:00\">\n  <sanctionEntity id=\"333\" euReferenceNumber=\"EU.1234.333\" logicalId=\"EST-2022-0333\" unitedNationId=\"\" DELISTED=\"true\">\n    <subjectType code=\"P\" classificationCode=\"EFSC\"/>\n    <regulation regulationType=\"EU\" organisationType=\"COUNCIL\"\n                publicationDate=\"2024-10-01\" entryIntoForceDate=\"2024-10-01\"\n                publicationUrl=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:Amd0333:TOC\"\n                programme=\"UKRAINE\" numberTitle=\"2024/Amd0333\"/>\n    <nameAlias aliasType=\"N\">\n      <wholeName>Dmitri Volkov</wholeName>\n      <firstName>Dmitri</firstName>\n      <lastName>Volkov</lastName>\n      <gender>M</gender>\n      <birthdate birthYear=\"1965\" calendarType=\"GREGORIAN\"/>\n      <nationality regionCode=\"RU\">Russia</nationality>\n    </nameAlias>\n    <remark>DELISTED effective 1 October 2024. All asset freezing measures lifted. Council Regulation (EU) 2024/Amd0333. Screening systems must be updated immediately to remove this individual.</remark>\n  </sanctionEntity>\n</export>",
+  "expected_summary_keywords": ["Dmitri Volkov", "delisted", "asset freeze lifted", "October 2024"],
+  "expected_mappings": []
+}

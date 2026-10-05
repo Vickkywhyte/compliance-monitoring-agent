@@ -1,0 +1,15 @@
+{
+  "id": "demo_006",
+  "title": "New EBA RTS on Beneficial Ownership Registers (EBA/RTS/2024/03)",
+  "source": "eba",
+  "stable_id": "RTS-2024-03",
+  "change_type": "new",
+  "source_url": "https://www.eba.europa.eu/regulation-and-policy/anti-money-laundering-and-e-money/rts-beneficial-ownership-registers",
+  "raw_content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><title>EBA Final draft RTS on beneficial ownership registers (EBA/RTS/2024/03)</title></head>\n<body><main><article class=\"publication-item\">\n  <h1 class=\"publication-title\">EBA Final draft RTS on access to beneficial ownership information (EBA/RTS/2024/03)</h1>\n  <div class=\"publication-date\">18 June 2024</div>\n  <div class=\"publication-description\">\n    <p>These RTS specify procedures for credit institutions to access beneficial ownership registers. They apply from 1 January 2025.</p>\n    <p>Article 2: Member States shall provide a RESTful API using OAuth 2.0. Response times shall not exceed two seconds for 95 percent of queries.</p>\n    <p>Article 4: Obliged entities shall verify beneficial ownership at least once per year. Any discrepancy shall be escalated within five working days.</p>\n    <p>NOTE: This entry contains minimal regulatory detail, demonstrating a low-confidence summary scenario for the demo pipeline.</p>\n  </div>\n</article></main></body></html>",
+  "expected_summary_keywords": ["beneficial ownership", "API", "OAuth", "annual verification"],
+  "expected_mappings": [
+    {"process_id": "kyc", "impact_type": "add_control"},
+    {"process_id": "customer_due_diligence", "impact_type": "add_control"}
+  ],
+  "notes": "Edge-case: EBA HTML with limited regulatory detail — demonstrates low-confidence summary path."
+}

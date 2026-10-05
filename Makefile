@@ -89,7 +89,7 @@ golden-validate:
 	$(PYTHON) scripts/08b_validate_golden.py
 
 demo:
-	@echo "ERROR: 'make demo' is not implemented yet (Phase 9)." && exit 1
+	python scripts/09_demo.py --reset
 
 serve:
 	streamlit run src/compliance_agent/dashboard/app.py \

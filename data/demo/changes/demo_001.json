@@ -1,0 +1,14 @@
+{
+  "id": "demo_001",
+  "title": "New EU AML Regulation 2024/811",
+  "source": "eurlex",
+  "stable_id": "32024R0811",
+  "change_type": "new",
+  "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0811",
+  "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<RESULTS>\n  <NOTICE>\n    <CELEX>32024R0811</CELEX>\n    <TITLE lang=\"EN\">Regulation (EU) 2024/811 of the European Parliament and of the Council on anti-money laundering and customer due diligence requirements</TITLE>\n    <DATE_DOCUMENT>2024-03-15</DATE_DOCUMENT>\n    <EFFECTIVE_DATE>2024-07-01</EFFECTIVE_DATE>\n    <CONTENTS>Article 1 - Scope. This regulation establishes enhanced customer due diligence requirements for credit institutions and financial undertakings. Article 2 - Definitions. Customer due diligence means the process of identifying and verifying the identity of customers and beneficial owners. Article 3 - Requirements. Financial institutions shall conduct enhanced due diligence for all customers presenting higher risk. Institutions must verify beneficial ownership and maintain records for a minimum of five years. Article 4 - Suspicious transaction reporting. Any transaction above EUR 10,000 that is suspected of being related to money laundering shall be reported to the Financial Intelligence Unit within 24 hours.</CONTENTS>\n  </NOTICE>\n</RESULTS>",
+  "expected_summary_keywords": ["anti-money laundering", "customer due diligence", "beneficial owner", "EUR 10,000", "FIU"],
+  "expected_mappings": [
+    {"process_id": "aml", "impact_type": "add_control"},
+    {"process_id": "customer_due_diligence", "impact_type": "add_control"}
+  ]
+}
