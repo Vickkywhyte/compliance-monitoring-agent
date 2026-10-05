@@ -209,7 +209,7 @@ deterministic across runs.
 
 ---
 
-## Phase 4 — Intelligence layer (summarize, map) ⚪
+## Phase 4 — Intelligence layer (summarize, map) 🟢
 
 **Goal:** LLM-powered summarization and process mapping, with rate-limit-aware
 gateway and prompt injection defense.
