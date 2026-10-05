@@ -1,7 +1,7 @@
 .PHONY: sync doctor test selftest clean clean-cache clean-data \
         ingest ingest-selftest detect detect-selftest \
         process process-selftest approve-selftest dashboard-selftest \
-        eval eval-selftest demo serve lock
+        eval eval-selftest golden-seed golden-validate demo serve lock
 
 # Prefer the activated venv's pip; fall back to the Homebrew Python 3.11
 PIP ?= $(shell command -v pip || echo /opt/homebrew/opt/python@3.11/bin/pip3.11)
@@ -79,6 +79,14 @@ eval:
 
 eval-selftest:
 	$(PYTHON) scripts/07_eval_selftest.py
+
+# ── Phase 8: golden set curation ─────────────────────────────────────────────
+
+golden-seed:
+	$(PYTHON) scripts/08_seed_golden.py
+
+golden-validate:
+	$(PYTHON) scripts/08b_validate_golden.py
 
 demo:
 	@echo "ERROR: 'make demo' is not implemented yet (Phase 9)." && exit 1

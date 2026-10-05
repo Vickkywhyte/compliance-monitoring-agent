@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2022-04-08" globaleSanctionNumber="1" version="1.1" dateGenerated="2022-04-08T06:00:00">
+  <sanctionEntity id="3330" euReferenceNumber="EU.2137.3330" logicalId="EST-2022-0333" unitedNationId="">
+    <subjectType code="P" classificationCode="PFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2022-04-05" entryIntoForceDate="2022-04-06"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2022:0333:TOC"
+                programme="UKRAINE" numberTitle="Council Regulation (EU) 2022/0333"/>
+    <nameAlias aliasType="N">
+      <wholeName>Dmitri Volkov</wholeName>
+      <lastName>Volkov</lastName>
+      <firstName>Dmitri</firstName>
+      <gender>M</gender>
+    </nameAlias>
+    <birthdate>
+      <birthdate>1965-03-18</birthdate>
+      <calendarType>GREGORIAN</calendarType>
+    </birthdate>
+    <citizenship countryIso2Code="RU"/>
+    <remark>WITHDRAWN — DELISTED. Council Regulation (EU) 2024/Amd0333 removes Dmitri Volkov from the sanctions list with effect from 1 October 2024 following a successful application for review. All asset freezing measures are lifted as of that date. Financial institutions should update their screening systems accordingly. Effective date of removal: 1 October 2024.</remark>
+  </sanctionEntity>
+</export>

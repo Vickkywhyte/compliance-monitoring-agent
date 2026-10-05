@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2024-03-01" globaleSanctionNumber="1" version="1.1" dateGenerated="2024-03-01T09:00:00">
+  <sanctionEntity id="8910" euReferenceNumber="EU.2137.8910" logicalId="EST-2023-0891" unitedNationId="IQe.891">
+    <subjectType code="E" classificationCode="EFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2024-02-28" entryIntoForceDate="2024-03-01"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:AMend0891:TOC"
+                programme="BELARUS" numberTitle="Council Regulation (EU) 2024/AmdBY891"/>
+    <nameAlias aliasType="N">
+      <wholeName>Technograd Industrial Holdings</wholeName>
+      <lastName>Holdings</lastName>
+      <firstName>Technograd Industrial</firstName>
+      <gender>0</gender>
+    </nameAlias>
+    <nameAlias aliasType="A">
+      <wholeName>TIH Group</wholeName>
+    </nameAlias>
+    <nameAlias aliasType="A">
+      <wholeName>Technograd Group ZAO</wholeName>
+    </nameAlias>
+    <address>
+      <street>Pr. Nezavisimosti 150</street>
+      <city>Minsk</city>
+      <countryIso2Code>BY</countryIso2Code>
+    </address>
+    <address>
+      <street>Naberezhnaya 77</street>
+      <city>Brest</city>
+      <countryIso2Code>BY</countryIso2Code>
+    </address>
+    <identification documentType="C" number="BY-1234567" countryIso2Code="BY" issueDate="2018-01-10"/>
+    <remark>AMENDED LISTING. Technograd Industrial Holdings entry has been updated to add two additional aliases (TIH Group; Technograd Group ZAO) and a second registered address in Brest. UN list reference IQe.891 added. The asset freeze and prohibition on making funds available continue to apply from 2 September 2023. Updated record effective 1 March 2024.</remark>
+  </sanctionEntity>
+</export>

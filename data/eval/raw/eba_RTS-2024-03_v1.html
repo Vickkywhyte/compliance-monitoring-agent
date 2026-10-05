@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="EBA Final draft RTS on beneficial ownership registers for AML purposes">
+  <title>EBA Final draft RTS on access to beneficial ownership information (EBA/RTS/2024/03)</title>
+  <link rel="canonical" href="https://www.eba.europa.eu/regulation-and-policy/anti-money-laundering-and-e-money/rts-beneficial-ownership-registers"/>
+</head>
+<body>
+  <main>
+    <article class="publication-item">
+      <h1 class="publication-title">EBA Final draft Regulatory Technical Standards on access to beneficial ownership information (EBA/RTS/2024/03)</h1>
+      <div class="publication-date">18 June 2024</div>
+      <div class="publication-reference">EBA/RTS/2024/03</div>
+      <div class="publication-description">
+        <p>These Regulatory Technical Standards (RTS) specify the procedures and technical conditions for credit institutions and financial undertakings to access beneficial ownership registers maintained by Member States pursuant to Article 30 of Directive (EU) 2015/849 as amended by Directive (EU) 2018/843.</p>
+        <p>The RTS apply from 1 January 2025 and shall be adopted by the European Commission as a Commission Delegated Regulation.</p>
+        <h2>Article 1: Scope</h2>
+        <p>These RTS apply to all obliged entities required to conduct beneficial ownership verification under Directive (EU) 2015/849. They specify the technical interface requirements for querying national beneficial ownership registers.</p>
+        <h2>Article 2: API standards for register access</h2>
+        <p>Member States shall provide a RESTful API endpoint conforming to OpenAPI 3.1 specification for programmatic access to beneficial ownership data. Obliged entities shall integrate with this API using OAuth 2.0 authentication. Response times shall not exceed two seconds for 95% of queries.</p>
+        <h2>Article 3: Data fields to be provided</h2>
+        <p>The beneficial ownership register shall return at minimum: (a) full legal name of the beneficial owner; (b) date of birth; (c) nationality; (d) country of residence; (e) nature and extent of beneficial interest (percentage and type); (f) date of registration and last update.</p>
+        <h2>Article 4: Verification obligations</h2>
+        <p>Obliged entities shall verify beneficial ownership information against the register at least once per year for existing customers and at the point of onboarding for new customers. Any discrepancy between self-reported information and register data shall be escalated to the AML compliance function within five working days.</p>
+        <h2>Article 5: Record keeping</h2>
+        <p>Results of beneficial ownership register queries, including the data retrieved and the date of query, shall be retained for a minimum of five years.</p>
+        <p>These RTS shall apply from 1 January 2025.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

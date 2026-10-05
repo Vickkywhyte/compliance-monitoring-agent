@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RESULTS>
+  <NOTICE>
+    <CELEX>32023R0956</CELEX>
+    <TITLE lang="EN">Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 on transaction monitoring obligations for payment service providers — AMENDED VERSION (Commission Delegated Regulation (EU) 2024/2156)</TITLE>
+    <DATE_DOCUMENT>2023-05-10</DATE_DOCUMENT>
+    <EFFECTIVE_DATE>2024-10-01</EFFECTIVE_DATE>
+    <AMENDING_ACT>32024R2156</AMENDING_ACT>
+    <PUBLICATION_DATE>2024-09-10</PUBLICATION_DATE>
+    <OJ_REFERENCE>OJ L 2024/2156 10.9.2024</OJ_REFERENCE>
+    <CONTENTS>
+Article 1 - Subject matter.
+This Regulation lays down obligations for payment service providers regarding the monitoring of payment transactions to detect and prevent money laundering, terrorist financing, and fraud.
+
+Article 2 - Transaction monitoring thresholds.
+1. Payment service providers shall monitor all payment transactions.
+2. Transactions exceeding EUR 5,000 in a single operation shall be subject to enhanced monitoring procedures as described in Article 4. [AMENDED — threshold reduced from EUR 10,000]
+3. Aggregate transactions from the same customer exceeding EUR 15,000 in a calendar month shall trigger a mandatory review. [AMENDED — threshold reduced from EUR 25,000]
+4. Payment service providers operating cross-border services shall apply a threshold of EUR 3,000 for transactions involving high-risk third countries. [NEW PARAGRAPH]
+
+Article 3 - Monitoring systems.
+1. Payment service providers shall maintain automated monitoring systems capable of detecting: (a) structuring patterns indicative of smurfing; (b) rapid movement of funds through multiple accounts; (c) transactions inconsistent with the customer's established profile; (d) mule account activity patterns as specified in EBA/GL/2024/12. [NEW POINT (d)]
+2. Monitoring rules and thresholds shall be reviewed semi-annually and updated where necessary. [AMENDED — from annually to semi-annually]
+
+Article 4 - Enhanced monitoring procedures.
+For transactions subject to enhanced monitoring under Article 2, payment service providers shall conduct a manual review within 24 hours and file a SAR if suspicion is confirmed. [AMENDED — time limit reduced from 48 to 24 hours]
+
+Article 5 - Record retention.
+Transaction monitoring records shall be retained for seven years. [AMENDED — from five to seven years]
+
+Article 6 - Entry into force.
+This Regulation enters into force on 1 November 2023. The amendments introduced by Commission Delegated Regulation (EU) 2024/2156 apply from 1 October 2024.
+    </CONTENTS>
+    <REFERENCES>
+      <REF>EBA/GL/2024/12 on mule account detection</REF>
+      <REF>FATF Guidance on digital payments 2024</REF>
+    </REFERENCES>
+  </NOTICE>
+</RESULTS>

@@ -38,6 +38,31 @@ Format: `[phase-N] type(scope): summary` (see CLAUDE.md §9).
 
 ---
 
+## Phase 8 — Ground truth + golden set 🟢 (2026-10-05)
+
+### Phase 8 — Ground truth + golden set
+**2026-10-05 — Completed**
+- 15 raw content fixtures under data/eval/raw/ (EUR-Lex XML, EU sanctions
+  XML, EBA HTML)
+- data/eval/golden.jsonl — 50 entries (20 new / 20 amended / 10 withdrawn)
+  authored by Claude Code under human review; annotator field set to
+  "claude_code" for honest provenance
+- data/eval/README.md — curation rules per 06_EVAL_SPEC.md §2.3
+- scripts/08_seed_golden.py — generates synthetic candidates to
+  golden_candidates.jsonl (pending human review)
+- scripts/08b_validate_golden.py — quality gate runner (11 checks pass)
+- tests/test_golden_schema.py — 9 tests
+- Makefile: golden-seed, golden-validate targets
+- Total tests: 194 (up from 185, +9 Phase 8 tests)
+- Fixed: 4 dashboard tests (tests/test_dashboard_views.py) were failing
+  at import time because plotly was declared in pyproject.toml but never
+  installed in .venv. Cause: pip install -e ".[dev]" skipped already-
+  satisfied deps. Fix: make sync now uses --upgrade. Added Lesson 1b to
+  01_LESSONS_APPLIED.md.
+- ADRs applied: ADR-011
+
+---
+
 ## Phase 7 — Evaluation harness 🟢 (2026-10-05)
 
 ### Phase 7 — Evaluation harness

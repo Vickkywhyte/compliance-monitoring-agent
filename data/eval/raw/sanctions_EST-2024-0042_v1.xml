@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2024-04-03" globaleSanctionNumber="1" version="1.1" dateGenerated="2024-04-03T08:00:00">
+  <sanctionEntity id="2042" euReferenceNumber="EU.2137.2042" logicalId="EST-2024-0042" unitedNationId="">
+    <subjectType code="E" classificationCode="EFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2024-04-01" entryIntoForceDate="2024-04-02"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:0042:TOC"
+                programme="UKRAINE" numberTitle="Council Regulation (EU) 2024/0042"/>
+    <nameAlias aliasType="N">
+      <wholeName>Synthetix Trading Corp</wholeName>
+      <lastName>Corp</lastName>
+      <firstName>Synthetix Trading</firstName>
+      <gender>0</gender>
+    </nameAlias>
+    <nameAlias aliasType="A">
+      <wholeName>STC Holdings Ltd</wholeName>
+    </nameAlias>
+    <birthdate>
+      <birthdate>1998-06-15</birthdate>
+      <calendarType>GREGORIAN</calendarType>
+    </birthdate>
+    <citizenship countryIso2Code="RU"/>
+    <address>
+      <street>Ul. Lenina 12</street>
+      <city>Moscow</city>
+      <countryIso2Code>RU</countryIso2Code>
+    </address>
+    <identification documentType="P" number="4510 123456" countryIso2Code="RU" issueDate="2015-03-01"/>
+    <remark>Synthetix Trading Corp is a synthetic entity subject to asset freezing and prohibition of making funds available measures pursuant to Council Regulation (EU) 2024/0042. The entity has been identified as providing financial support for activities that undermine the territorial integrity of Ukraine. All financial institutions are required to freeze assets and report any knowledge of assets to competent authorities within 10 business days. Effective date: 2 April 2024.</remark>
+  </sanctionEntity>
+</export>

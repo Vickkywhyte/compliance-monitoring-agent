@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RESULTS>
+  <NOTICE>
+    <CELEX>32024R1205</CELEX>
+    <TITLE lang="EN">Regulation (EU) 2024/1205 of the European Parliament and of the Council of 22 May 2024 on reporting requirements for systemically important financial institutions</TITLE>
+    <DATE_DOCUMENT>2024-05-22</DATE_DOCUMENT>
+    <EFFECTIVE_DATE>2025-01-01</EFFECTIVE_DATE>
+    <PUBLICATION_DATE>2024-05-28</PUBLICATION_DATE>
+    <OJ_REFERENCE>OJ L 2024/1205 28.5.2024</OJ_REFERENCE>
+    <CONTENTS>
+Article 1 - Purpose.
+This Regulation establishes harmonised reporting requirements for systemically important financial institutions (SIFIs) operating within the Union. It aims to strengthen supervisory convergence and improve the quality of data submitted to competent authorities.
+
+Article 2 - Scope.
+1. This Regulation applies to: (a) global systemically important institutions (G-SIIs) as identified pursuant to Article 131 of Directive 2013/36/EU; (b) other systemically important institutions (O-SIIs) as identified pursuant to Article 131(3) of Directive 2013/36/EU; (c) investment firms meeting the thresholds specified in Annex II.
+2. This Regulation does not apply to credit institutions with total assets below EUR 5 billion.
+
+Article 3 - Reporting templates.
+1. Institutions subject to this Regulation shall submit reports using the harmonised templates set out in Annex I.
+2. Reports shall be submitted on a quarterly basis no later than 30 calendar days after the end of each reference period.
+3. The first reporting reference date shall be 31 March 2025.
+
+Article 4 - Data quality requirements.
+1. Institutions shall implement internal governance arrangements to ensure the accuracy, completeness and consistency of reported data.
+2. Material errors discovered after submission shall be corrected and a revised report submitted within 15 working days.
+
+Article 5 - XBRL taxonomy.
+All data shall be submitted in XBRL format using the taxonomy published by the European Banking Authority. Competent authorities may accept CSV formats where XBRL infrastructure is not yet operational, provided this exception does not extend beyond 31 December 2025.
+
+Article 6 - Competent authority obligations.
+Competent authorities shall verify the completeness and plausibility of submitted data within 45 calendar days of receipt. Discrepancies shall be raised with the reporting institution within that window.
+
+Article 7 - Penalties.
+Member States shall ensure that administrative penalties of at least EUR 5 million or 2% of total annual turnover, whichever is higher, apply to persistent or material reporting failures.
+
+Article 8 - Review clause.
+The Commission shall review the operation of this Regulation by 31 December 2027, paying particular attention to the proportionality of requirements for O-SIIs.
+
+Article 9 - Entry into force.
+This Regulation shall enter into force on 1 January 2025.
+    </CONTENTS>
+    <REFERENCES>
+      <REF>Directive 2013/36/EU (CRD IV)</REF>
+      <REF>Regulation (EU) No 575/2013 (CRR)</REF>
+      <REF>EBA XBRL Taxonomy v3.4</REF>
+    </REFERENCES>
+  </NOTICE>
+</RESULTS>

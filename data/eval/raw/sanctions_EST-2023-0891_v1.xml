@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2023-09-05" globaleSanctionNumber="1" version="1.1" dateGenerated="2023-09-05T09:00:00">
+  <sanctionEntity id="8910" euReferenceNumber="EU.2137.8910" logicalId="EST-2023-0891" unitedNationId="">
+    <subjectType code="E" classificationCode="EFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2023-09-01" entryIntoForceDate="2023-09-02"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2023:0891:TOC"
+                programme="BELARUS" numberTitle="Council Regulation (EU) 2023/0891"/>
+    <nameAlias aliasType="N">
+      <wholeName>Technograd Industrial Holdings</wholeName>
+      <lastName>Holdings</lastName>
+      <firstName>Technograd Industrial</firstName>
+      <gender>0</gender>
+    </nameAlias>
+    <address>
+      <street>Pr. Nezavisimosti 150</street>
+      <city>Minsk</city>
+      <countryIso2Code>BY</countryIso2Code>
+    </address>
+    <remark>ORIGINAL LISTING. Technograd Industrial Holdings is a synthetic entity subject to asset freezing under Council Regulation (EU) 2023/0891 relating to the situation in Belarus. The entity is controlled by persons identified as supporting actions undermining democratic processes. Asset freeze applies from 2 September 2023.</remark>
+  </sanctionEntity>
+</export>

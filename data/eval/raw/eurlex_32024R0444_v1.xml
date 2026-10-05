@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RESULTS>
+  <NOTICE>
+    <CELEX>32024R0444</CELEX>
+    <TITLE lang="EN">Regulation (EU) 2024/444 of the European Parliament and of the Council of 12 February 2024 on know-your-customer requirements for virtual asset service providers</TITLE>
+    <DATE_DOCUMENT>2024-02-12</DATE_DOCUMENT>
+    <EFFECTIVE_DATE>2024-08-01</EFFECTIVE_DATE>
+    <PUBLICATION_DATE>2024-02-19</PUBLICATION_DATE>
+    <OJ_REFERENCE>OJ L 2024/444 19.2.2024</OJ_REFERENCE>
+    <CONTENTS>
+Article 1 - Subject matter.
+This Regulation establishes specific know-your-customer (KYC) obligations for virtual asset service providers (VASPs) registered or operating within the Union, supplementing the general requirements of Directive (EU) 2015/849 as amended by Directive (EU) 2018/843.
+
+Article 2 - Definitions.
+For the purposes of this Regulation: (a) 'virtual asset' means a digital representation of value that can be digitally traded or transferred and can be used for payment or investment purposes, as defined in the Financial Action Task Force (FATF) Recommendations; (b) 'virtual asset service provider' means any natural or legal person who provides one or more virtual asset services on a professional basis; (c) 'travel rule' means the requirement under FATF Recommendation 16 to obtain, hold and transmit originator and beneficiary information during virtual asset transfers.
+
+Article 3 - Customer identification for virtual asset transactions.
+1. VASPs shall perform customer identification and verification before establishing a business relationship or executing any virtual asset transfer exceeding EUR 1,000.
+2. For unhosted wallet transfers exceeding EUR 1,000, VASPs shall: (a) collect the name and address of the unhosted wallet owner; (b) verify the customer's ownership of the unhosted wallet using a cryptographic signature or small test transaction; (c) retain records of the verification process for five years.
+
+Article 4 - Travel rule compliance.
+1. VASPs shall ensure that virtual asset transfers are accompanied by originator and beneficiary information as specified in Annex I.
+2. For transfers below EUR 1,000 to unhosted wallets, VASPs shall collect and retain originator information but need not verify the beneficiary's identity unless risk indicators are present.
+
+Article 5 - Enhanced monitoring for high-risk jurisdictions.
+Transfers to or from addresses associated with jurisdictions on the FATF high-risk list shall be subject to enhanced scrutiny, including manual review by a compliance officer prior to execution.
+
+Article 6 - Sanctions screening.
+VASPs shall screen all customers and counterparties against the EU Consolidated Sanctions List maintained by the OFAC and the UN Security Council Consolidated List before executing any transfer.
+
+Article 7 - Record keeping.
+All KYC records, transaction records, and compliance correspondence shall be retained for a minimum period of five years and made available to competent authorities upon request within 48 hours.
+
+Article 8 - Reporting to FIU.
+VASPs shall file suspicious activity reports (SARs) with the national FIU within 24 hours of identifying a suspicious transaction. Reports shall use the standardised format published by Eurostat.
+
+Article 9 - Supervisory fees.
+VASPs registered under this Regulation shall contribute to a supervisory fund administered by ESMA. Annual fees are calculated on the basis of average daily transaction volume as specified in Annex II.
+
+Article 10 - Entry into force.
+This Regulation shall enter into force on 1 August 2024.
+    </CONTENTS>
+    <REFERENCES>
+      <REF>Directive (EU) 2015/849 (5AMLD)</REF>
+      <REF>Directive (EU) 2018/843 (6AMLD)</REF>
+      <REF>FATF Recommendation 16</REF>
+      <REF>Regulation (EU) 2023/1113 (Transfer of Funds Regulation)</REF>
+    </REFERENCES>
+  </NOTICE>
+</RESULTS>

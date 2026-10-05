@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="2024-06-18" globaleSanctionNumber="1" version="1.1" dateGenerated="2024-06-18T12:00:00">
+  <sanctionEntity id="3117" euReferenceNumber="EU.2137.3117" logicalId="EST-2024-0117" unitedNationId="QDe.117">
+    <subjectType code="P" classificationCode="PFSC"/>
+    <regulation regulationType="EU" organisationType="COUNCIL"
+                publicationDate="2024-06-15" entryIntoForceDate="2024-06-16"
+                publicationUrl="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L:2024:0117:TOC"
+                programme="ISIL-AL-QAEDA" numberTitle="Council Regulation (EU) 2024/0117"/>
+    <nameAlias aliasType="N">
+      <wholeName>Ahmad Karim Al-Farsi</wholeName>
+      <lastName>Al-Farsi</lastName>
+      <firstName>Ahmad Karim</firstName>
+      <gender>M</gender>
+    </nameAlias>
+    <nameAlias aliasType="A">
+      <wholeName>Abu Karim</wholeName>
+    </nameAlias>
+    <birthdate>
+      <birthdate>1979-11-22</birthdate>
+      <calendarType>GREGORIAN</calendarType>
+    </birthdate>
+    <citizenship countryIso2Code="SY"/>
+    <address>
+      <city>Idlib</city>
+      <countryIso2Code>SY</countryIso2Code>
+    </address>
+    <remark>Ahmad Karim Al-Farsi (also known as Abu Karim) is a synthetic individual subject to travel ban and asset freezing measures under Council Regulation (EU) 2024/0117 implementing UN Security Council Resolution 2610 (2021). The individual is listed for providing financial and logistical support to proscribed organisations. Financial institutions must freeze all funds and economic resources owned, held or controlled by this person without delay. Transactions with this person are prohibited. Effective date: 16 June 2024.</remark>
+  </sanctionEntity>
+</export>
