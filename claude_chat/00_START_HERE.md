@@ -10,7 +10,7 @@ Quick reference for the current project state. Full details in `08_ROADMAP.md`.
 | 2 | Ingestion + storage | 🟢 Complete | Phase 3 next |
 | 3 | Change detection | 🟢 Complete | Phase 4 next |
 | 4 | Intelligence layer (summarize, map) | 🟢 Complete | Phase 5 next |
-| 5 | Proposals + routing + approval | ⚪ Not started | |
+| 5 | Proposals + routing + approval | 🟢 Complete | Phase 6 next |
 | 6 | Dashboard (Streamlit) | ⚪ Not started | |
 | 7 | Evaluation harness | ⚪ Not started | |
 | 8 | Ground truth + golden set | ⚪ Not started | |

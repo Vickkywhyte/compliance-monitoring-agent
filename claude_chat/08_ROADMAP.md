@@ -270,7 +270,7 @@ rate-limit metrics logged.
 
 ---
 
-## Phase 5 — Proposals + routing + approval ⚪
+## Phase 5 — Proposals + routing + approval 🟢
 
 **Goal:** Convert mappings into structured proposals; route; enable
 human-in-the-loop approval with audit.
