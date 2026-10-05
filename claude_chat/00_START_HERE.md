@@ -12,7 +12,7 @@ Quick reference for the current project state. Full details in `08_ROADMAP.md`.
 | 4 | Intelligence layer (summarize, map) | 🟢 Complete | Phase 5 next |
 | 5 | Proposals + routing + approval | 🟢 Complete | Phase 6 next |
 | 6 | Dashboard (Streamlit) | 🟢 Complete | Phase 7 next |
-| 7 | Evaluation harness | ⚪ Not started | |
+| 7 | Evaluation harness | 🟢 Complete | Phase 8 next |
 | 8 | Ground truth + golden set | ⚪ Not started | |
 | 9 | End-to-end pipeline + demo mode | ⚪ Not started | |
 | 10 | Security hardening + Docker | ⚪ Not started | |

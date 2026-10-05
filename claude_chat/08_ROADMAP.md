@@ -374,7 +374,7 @@ Expected: dashboard HTML served; selftest passes; view tests pass.
 
 ---
 
-## Phase 7 — Evaluation harness ⚪
+## Phase 7 — Evaluation harness 🟢
 
 **Goal:** Implement every metric from `06_EVAL_SPEC.md` with fixtures.
 
